@@ -2,8 +2,6 @@ import React from 'react';
 
 const Photo = (props) => {
     const photo = props.data;
-    // console.log(props);
-    console.log(photo);
 
     return (
         <div className="card">

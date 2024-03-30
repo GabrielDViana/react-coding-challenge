@@ -10,10 +10,8 @@ class PhotoContainer extends React.Component {
     
     componentDidMount() {
         const url = 'http://localhost:4000/photo-info?photoid='+ this.props.data.id;
-        console.log(url)
         axios.get(url)
             .then(res => {
-                // console.log(res.data);
                 this.setState({
                     photoData: res.data
                 })

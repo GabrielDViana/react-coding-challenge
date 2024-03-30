@@ -8,11 +8,9 @@ class GalleryContainer extends React.Component {
     }
     
     componentDidMount() {
-        console.log(this.state.galleryData);
 
         axios.get('http://localhost:4000/gallery')
             .then(res => {
-                console.log(res.data);
                 this.setState({
                     galleryData: res.data
                 })
