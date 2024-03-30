@@ -2,7 +2,6 @@ import React from 'react';
 
 const Feed = (props) => {
     const entry = props.data;
-    console.log("ASAA", entry)
     return (
         <div className="col-sm-3 my-2">
             <div class="card" >

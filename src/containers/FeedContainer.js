@@ -11,7 +11,6 @@ class FeedContainer extends React.Component {
 
         axios.get('http://localhost:4000/feed')
             .then(res => {
-                console.log(res)
                 this.setState({
                     feedData: res.data
                 })
