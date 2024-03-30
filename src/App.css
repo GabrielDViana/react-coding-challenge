@@ -37,6 +37,6 @@
   }
 }
 .card-img-fit{
-  max-height: 10rem;
+  height: 10rem;
   object-fit: cover;
 }
