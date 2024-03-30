@@ -5,8 +5,10 @@ class CustomLayout extends React.Component {
 
     render() {
         return (
-            <GalleryContainer>
-            </GalleryContainer>
+            <div className='container'>
+                <GalleryContainer>
+                </GalleryContainer>
+            </div>
         );
     }
 }

@@ -1,24 +1,28 @@
 import React from 'react';
 import axios from 'axios';
+import Photo from '../components/Photo';
 
 class PhotoContainer extends React.Component {
     state = {
-        galleryData: {}
+        photoData: null,
+        galleryData: this.props.data
     }
     
     componentDidMount() {
-        axios.get('http://localhost:4000/photo')
+        const url = 'http://localhost:4000/photo-info?photoid='+ this.props.data.id;
+        console.log(url)
+        axios.get(url)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 this.setState({
-                    galleryData: res.data
+                    photoData: res.data
                 })
             })
     }
 
     render() {
         return (
-            <Photo data={this.state.galleryData} />
+            this.state.photoData && <Photo data={this.state} />
         );
     }
 }
