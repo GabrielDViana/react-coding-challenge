@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Feed from '../components/Feed'
+import FeedCard from '../components/FeedCard'
 
 class FeedContainer extends React.Component {
     state = {
@@ -22,10 +22,17 @@ class FeedContainer extends React.Component {
     render() {
         return (
             <div className="container">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            Flickr Public Feed
+                        </a>
+                    </div>
+                </nav>
                 <div className="row">
                     {this.state.feedData &&
                         this.state.feedData.entry.map(entry =>
-                            <Feed data={entry} key={entry.id} />
+                            <FeedCard data={entry} key={entry.id} />
                         )
                     }
                 </div>
