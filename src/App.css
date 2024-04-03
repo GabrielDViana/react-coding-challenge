@@ -40,3 +40,6 @@
   height: 10rem;
   object-fit: cover;
 }
+.card-title {
+  height: 2rem;
+}
